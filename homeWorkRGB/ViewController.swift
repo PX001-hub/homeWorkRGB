@@ -39,14 +39,17 @@ class ViewController: UIViewController {
 //        greenLable.delegate = self
 //        blueLable.delegate = self
 //
-       // setSliders()
-       
+        setSliders()
+        setColor()
 //   setValue(for: redLabel, greenLabel, blueLabel)
-////
-////    }
-//
-//    @IBAction func rgbSliderAction(_ sender: UISlider) {
-//
+        
+    }
+    
+    
+    @IBAction func rgbSliderAction(_ sender: UISlider) {
+        greenLable.text = String(greenSlider.value)
+        
+
 //        switch sender {
 //        case redSlider:
 //            setValue(for: colorView)
@@ -55,11 +58,11 @@ class ViewController: UIViewController {
 //        default:
 //            setValue(for: colorView)
 //        }
-//    }
+    }
        
-        setColor()
+        
 }
-}
+
 
 extension ViewController {
     
@@ -73,14 +76,25 @@ extension ViewController {
     
     }
     
-//    private func setSliders() {
-//        let ciColor = CIColor(color: viewColor)
+    private func setSliders() {
+        let ciColor = CIColor(color: viewColor)
+
+        redSlider.value = Float(ciColor.red)
+        greenSlider.value = Float(ciColor.green)
+        blueSlider.value = Float(ciColor.blue)
+
+//        redSlider.value = 1
+//        redSlider.minimumValue = 1
+//        redSlider.minimumValue = 100
 //
-//        redSlider.value = Float(ciColor.red)
-//        greenSlider.value = Float(ciColor.green)
-//        blueSlider.value = Float(ciColor.blue)
+//        greenSlider.value = 1
+//        greenSlider.minimumValue = 1
+//        greenSlider.minimumValue = 100
 //
-//    }
+//        blueSlider.value = 1
+//        blueSlider.minimumValue = 1
+//        blueSlider.minimumValue = 100
+    }
 
     
 }
