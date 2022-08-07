@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 class ViewController: UIViewController {
 
@@ -41,8 +42,7 @@ class ViewController: UIViewController {
 
         setSliders()
         setColor()
-//   setValue(for: redLabel, greenLabel, blueLabel)
-        
+       
     }
     
     @IBAction func redSliderAction() {
@@ -57,17 +57,27 @@ class ViewController: UIViewController {
         setColor()
     }
     
-//        switch sender {
-//        case redSlider:
-//            setValue(for: colorView)
-//        case greenSlider:
-//            setValue(for: colorView)
-//        default:
-//            setValue(for: colorView)
-//        }
+//MARK: —
+    
+    @IBAction func redSliderValue() {
+        redLable.text = String(format: "%.2", redSlider.value)
     }
+    
+
+    @IBAction func greenSliderValue() {
+        greenLable.text = String(format: "%.2", greenSlider.value)
+    }
+    
+    
+    @IBAction func blueSliderValue() {
+        blueLable.text = String(format: "%.2", blueSlider.value)
+    }
+    
+    
+}
+    
+    
        
-        
 
 
 
