@@ -42,6 +42,7 @@ class ViewController: UIViewController {
 
         setSliders()
         setColor()
+//        setupValueLable()
        
     }
     
@@ -73,13 +74,13 @@ class ViewController: UIViewController {
         blueLable.text = String(format: "%.2", blueSlider.value)
     }
     
+//    private func setupValueLable () {
+//        redLable.text = String(redSlider.value)
     
 }
-    
-    
-       
 
-
+    
+//}
 
 extension ViewController {
     
@@ -94,24 +95,26 @@ extension ViewController {
     }
         
     
+  
+    
     private func setSliders() {
-////        let ciColor = CIColor(color: viewColor)
+//    let ciColor = CIColor(color: viewColor)
 //
 //        redSlider.value = Float(ciColor.red)
 //        greenSlider.value = Float(ciColor.green)
 //        blueSlider.value = Float(ciColor.blue)
 
-//        redSlider.value = 1
+//        redSlider.value = 0
+//        redSlider.minimumValue = 0
 //        redSlider.minimumValue = 1
-//        redSlider.minimumValue = 100
 //
-//        greenSlider.value = 1
+//        greenSlider.value = 0
+//        greenSlider.minimumValue = 0
 //        greenSlider.minimumValue = 1
-//        greenSlider.minimumValue = 100
 //
-//        blueSlider.value = 1
+//        blueSlider.value = 0
+//        blueSlider.minimumValue = 0
 //        blueSlider.minimumValue = 1
-//        blueSlider.minimumValue = 100
     }
 
     
