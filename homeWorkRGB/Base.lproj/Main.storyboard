@@ -83,15 +83,21 @@
                                         <subviews>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="rJS-qD-YID" userLabel="Red Slider">
                                                 <rect key="frame" x="-2" y="0.0" width="184" height="31"/>
+                                                <connections>
+                                                    <action selector="redSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="3x9-zq-xtp"/>
+                                                </connections>
                                             </slider>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="3yx-D7-v8Z" userLabel="Green Slider">
                                                 <rect key="frame" x="-2" y="80" width="184" height="31"/>
                                                 <connections>
-                                                    <action selector="rgbSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="DPr-Ky-9uB"/>
+                                                    <action selector="greenSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="DmU-Ww-jcJ"/>
                                                 </connections>
                                             </slider>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="AWl-Nz-x7K" userLabel="Blue Slider">
                                                 <rect key="frame" x="-2" y="160" width="184" height="31"/>
+                                                <connections>
+                                                    <action selector="blueSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="II3-Lo-sOB"/>
+                                                </connections>
                                             </slider>
                                         </subviews>
                                         <constraints>

@@ -38,18 +38,25 @@ class ViewController: UIViewController {
 //        redLable.delegate = self
 //        greenLable.delegate = self
 //        blueLable.delegate = self
-//
+
         setSliders()
         setColor()
 //   setValue(for: redLabel, greenLabel, blueLabel)
         
     }
     
+    @IBAction func redSliderAction() {
+        setColor()
+    }
     
-    @IBAction func rgbSliderAction(_ sender: UISlider) {
-        greenLable.text = String(greenSlider.value)
-        
-
+    @IBAction func greenSliderAction() {
+        setColor()
+    }
+    
+    @IBAction func blueSliderAction() {
+        setColor()
+    }
+    
 //        switch sender {
 //        case redSlider:
 //            setValue(for: colorView)
@@ -61,7 +68,7 @@ class ViewController: UIViewController {
     }
        
         
-}
+
 
 
 extension ViewController {
@@ -75,13 +82,14 @@ extension ViewController {
         )
     
     }
+        
     
     private func setSliders() {
-        let ciColor = CIColor(color: viewColor)
-
-        redSlider.value = Float(ciColor.red)
-        greenSlider.value = Float(ciColor.green)
-        blueSlider.value = Float(ciColor.blue)
+////        let ciColor = CIColor(color: viewColor)
+//
+//        redSlider.value = Float(ciColor.red)
+//        greenSlider.value = Float(ciColor.green)
+//        blueSlider.value = Float(ciColor.blue)
 
 //        redSlider.value = 1
 //        redSlider.minimumValue = 1
