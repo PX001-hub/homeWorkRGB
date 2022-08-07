@@ -17,14 +17,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WSZ-ME-nNs">
-                                <rect key="frame" x="20" y="20" width="280" height="152"/>
+                                <rect key="frame" x="20" y="50" width="280" height="152"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="WSZ-ME-nNs" secondAttribute="height" multiplier="35:19" id="NAg-Or-aCX"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="Tg5-8b-EPG">
-                                <rect key="frame" x="18" y="192" width="278" height="190"/>
+                                <rect key="frame" x="18" y="222" width="278" height="190"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="62" translatesAutoresizingMaskIntoConstraints="NO" id="FOK-CT-MeB">
                                         <rect key="frame" x="0.0" y="0.0" width="46" height="190"/>
@@ -86,6 +86,9 @@
                                             </slider>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="3yx-D7-v8Z" userLabel="Green Slider">
                                                 <rect key="frame" x="-2" y="80" width="184" height="31"/>
+                                                <connections>
+                                                    <action selector="rgbSliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="DPr-Ky-9uB"/>
+                                                </connections>
                                             </slider>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="AWl-Nz-x7K" userLabel="Blue Slider">
                                                 <rect key="frame" x="-2" y="160" width="184" height="31"/>
@@ -103,16 +106,19 @@
                         <color key="backgroundColor" red="0.98039215686274506" green="0.95686274509803915" blue="0.71764705882352942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Tg5-8b-EPG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="18" id="5mw-3J-A0u"/>
-                            <constraint firstItem="WSZ-ME-nNs" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="20" symbolic="YES" id="6L5-3g-usg"/>
                             <constraint firstItem="WSZ-ME-nNs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EmJ-3d-Qgw"/>
+                            <constraint firstItem="WSZ-ME-nNs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="GX0-hi-QnL"/>
                             <constraint firstItem="Tg5-8b-EPG" firstAttribute="top" secondItem="WSZ-ME-nNs" secondAttribute="bottom" constant="20" id="U8S-GF-um0"/>
                             <constraint firstItem="WSZ-ME-nNs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="o9y-Eh-MAZ"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="blueLable" destination="2Vs-PS-0pv" id="3S8-Z1-fxv"/>
                         <outlet property="blueSlider" destination="AWl-Nz-x7K" id="cFu-4V-awj"/>
                         <outlet property="colorView" destination="WSZ-ME-nNs" id="Cqi-L0-kNu"/>
+                        <outlet property="greenLable" destination="Qk8-Xy-Kv8" id="F5d-Vv-ltf"/>
                         <outlet property="greenSlider" destination="3yx-D7-v8Z" id="jKH-ay-8Ma"/>
+                        <outlet property="redLable" destination="TRJ-KM-9yD" id="3WF-Sn-Vzq"/>
                         <outlet property="redSlider" destination="rJS-qD-YID" id="Ygw-NR-Ly4"/>
                     </connections>
                 </viewController>
