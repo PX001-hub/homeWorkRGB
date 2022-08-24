@@ -21,7 +21,6 @@ class RGBViewController: UIViewController {
     @IBOutlet var greenLable: UILabel!
     @IBOutlet var blueLable: UILabel!
     
-    
     var delegate: ViewControllerDelegate!
     var viewColor: UIColor!
     
