@@ -61,17 +61,17 @@ class ViewController: UIViewController {
 //MARK: —
     
     @IBAction func redSliderValue() {
-        redLable.text = String(format: "%.2", redSlider.value)
+        redLable.text = String(format: "%.1f", redSlider.value)
     }
     
 
     @IBAction func greenSliderValue() {
-        greenLable.text = String(format: "%.2", greenSlider.value)
+        greenLable.text = String(format: "%.1f", greenSlider.value)
     }
     
     
     @IBAction func blueSliderValue() {
-        blueLable.text = String(format: "%.2", blueSlider.value)
+        blueLable.text = String(format: "%.1f", blueSlider.value)
     }
     
 //    private func setupValueLable () {
