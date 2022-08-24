@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Pkl-Af-Cmr">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -8,23 +8,59 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Welcome to the Colour Randomizer-->
+        <scene sceneID="o3N-f2-YpU">
+            <objects>
+                <viewController id="E9P-F0-oA4" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Njc-Qa-PMT" customClass="WelcomeViewController" customModule="homeWorkRGB" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bhk-CF-tWF">
+                                <rect key="frame" x="98" y="268.5" width="124" height="31"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Colour Settings"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="ColourSetterSegue" id="BC9-hY-gV6"/>
+                                </connections>
+                            </button>
+                            <view alpha="0.34999999999999998" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ek9-SS-EmR">
+                                <rect key="frame" x="0.0" y="44" width="320" height="524"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yxH-KZ-kBt"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="bhk-CF-tWF" firstAttribute="centerY" secondItem="Njc-Qa-PMT" secondAttribute="centerY" id="Wyg-T5-0a1"/>
+                            <constraint firstItem="bhk-CF-tWF" firstAttribute="centerX" secondItem="Njc-Qa-PMT" secondAttribute="centerX" id="rey-PK-cIk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Welcome to the Colour Randomizer" id="Djj-SI-VSr"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rG0-8E-M9R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="294.375" y="68.661971830985919"/>
+        </scene>
+        <!--Colour Presenter -->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="homeWorkRGB" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="RGBViewController" customModule="homeWorkRGB" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WSZ-ME-nNs">
-                                <rect key="frame" x="20" y="50" width="280" height="152"/>
+                                <rect key="frame" x="20" y="94" width="280" height="152"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="WSZ-ME-nNs" secondAttribute="height" multiplier="35:19" id="NAg-Or-aCX"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="Tg5-8b-EPG">
-                                <rect key="frame" x="18" y="222" width="278" height="190"/>
+                                <rect key="frame" x="18" y="266" width="278" height="190"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="62" translatesAutoresizingMaskIntoConstraints="NO" id="FOK-CT-MeB">
                                         <rect key="frame" x="0.0" y="0.0" width="46" height="190"/>
@@ -121,6 +157,7 @@
                             <constraint firstItem="WSZ-ME-nNs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="o9y-Eh-MAZ"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Colour Presenter " id="gbE-f0-qQT"/>
                     <connections>
                         <outlet property="blueLable" destination="2Vs-PS-0pv" id="3S8-Z1-fxv"/>
                         <outlet property="blueSlider" destination="AWl-Nz-x7K" id="cFu-4V-awj"/>
@@ -133,12 +170,33 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="16.875" y="68.661971830985919"/>
+            <point key="canvasLocation" x="1014.375" y="68.661971830985919"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8nd-0c-4RG">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Pkl-Af-Cmr" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="26F-ob-9pn">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="E9P-F0-oA4" kind="relationship" relationship="rootViewController" id="p4A-SD-aLp"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eFI-gf-9Nx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-448" y="69"/>
         </scene>
     </scenes>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

@@ -8,7 +8,7 @@
 import UIKit
 import SwiftUI
 
-class ViewController: UIViewController {
+class RGBViewController: UIViewController {
 
     @IBOutlet var colorView: UIView!
     
@@ -34,15 +34,12 @@ class ViewController: UIViewController {
         redSlider.minimumTrackTintColor = .red
         greenSlider.minimumTrackTintColor = .green
         blueSlider.minimumTrackTintColor = .blue
-        
-        
-//        redLable.delegate = self
-//        greenLable.delegate = self
-//        blueLable.delegate = self
-
         setSliders()
         setColor()
-//        setupValueLable()
+        
+        
+        
+
        
     }
     
@@ -74,15 +71,12 @@ class ViewController: UIViewController {
         blueLable.text = String(format: "%.1f", blueSlider.value)
     }
     
-//    private func setupValueLable () {
-//        redLable.text = String(redSlider.value)
-    
 }
 
     
 //}
 
-extension ViewController {
+extension RGBViewController {
     
     private func setColor() {
         colorView.backgroundColor = UIColor(
@@ -98,23 +92,6 @@ extension ViewController {
   
     
     private func setSliders() {
-//    let ciColor = CIColor(color: viewColor)
-//
-//        redSlider.value = Float(ciColor.red)
-//        greenSlider.value = Float(ciColor.green)
-//        blueSlider.value = Float(ciColor.blue)
-
-//        redSlider.value = 0
-//        redSlider.minimumValue = 0
-//        redSlider.minimumValue = 1
-//
-//        greenSlider.value = 0
-//        greenSlider.minimumValue = 0
-//        greenSlider.minimumValue = 1
-//
-//        blueSlider.value = 0
-//        blueSlider.minimumValue = 0
-//        blueSlider.minimumValue = 1
     }
 
     

@@ -14,10 +14,11 @@ protocol ViewControllerDelegate {
 class MainViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let colorVC = segue.destination as? ViewController else { return }
+        guard let colorVC = segue.destination as? RGBViewController else { return }
         colorVC.delegate = self
         colorVC.viewColor = view.backgroundColor
     }
+    
 }
 
 extension MainViewController: ViewControllerDelegate {
@@ -25,4 +26,7 @@ extension MainViewController: ViewControllerDelegate {
         view.backgroundColor = color
     }
 }
+
+
+
 
