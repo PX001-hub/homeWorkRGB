@@ -8,8 +8,9 @@
 import UIKit
 import SwiftUI
 
-class RGBViewController: UIViewController {
-
+final class RGBViewController: UIViewController {
+    
+    //MARK: -
     @IBOutlet var colorView: UIView!
     
     @IBOutlet var redSlider: UISlider!
@@ -20,22 +21,22 @@ class RGBViewController: UIViewController {
     @IBOutlet var redLable: UILabel!
     @IBOutlet var greenLable: UILabel!
     @IBOutlet var blueLable: UILabel!
-    
+    //MARK: -
     var delegate: ViewControllerDelegate!
     var viewColor: UIColor!
     
+    //MARK: -
     override func viewDidLoad() {
         super.viewDidLoad()
         
         colorView.layer.cornerRadius = 20
-        //colorView.backgroundColor = viewColor
+        colorView.backgroundColor = viewColor
         
         redSlider.minimumTrackTintColor = .red
         greenSlider.minimumTrackTintColor = .green
         blueSlider.minimumTrackTintColor = .blue
         setSliders()
         setColor()
-        
         
         
 
@@ -72,8 +73,7 @@ class RGBViewController: UIViewController {
     
 }
 
-    
-//}
+
 
 extension RGBViewController {
     

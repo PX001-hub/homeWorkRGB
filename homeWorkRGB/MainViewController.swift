@@ -11,7 +11,7 @@ protocol ViewControllerDelegate {
     func setColor(_ color: UIColor)
 }
 
-class MainViewController: UIViewController {
+final class MainViewController: UIViewController {
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let colorVC = segue.destination as? RGBViewController else { return }
@@ -21,6 +21,7 @@ class MainViewController: UIViewController {
     
 }
 
+//MARK: -
 extension MainViewController: ViewControllerDelegate {
     func setColor(_ color: UIColor) {
         view.backgroundColor = color
