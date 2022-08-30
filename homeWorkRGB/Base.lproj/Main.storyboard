@@ -11,7 +11,7 @@
         <!--Welcome to the Colour Randomizer-->
         <scene sceneID="o3N-f2-YpU">
             <objects>
-                <viewController id="E9P-F0-oA4" sceneMemberID="viewController">
+                <viewController id="E9P-F0-oA4" customClass="WelcomViewControler" customModule="homeWorkRGB" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Njc-Qa-PMT" customClass="WelcomeViewController" customModule="homeWorkRGB" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -141,6 +141,14 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gla-Jx-QnT">
+                                <rect key="frame" x="131" y="503" width="59" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Done"/>
+                                <connections>
+                                    <action selector="doneButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uKO-fo-ucn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.98039215686274506" green="0.95686274509803915" blue="0.71764705882352942" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -148,7 +156,10 @@
                             <constraint firstItem="Tg5-8b-EPG" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="18" id="5mw-3J-A0u"/>
                             <constraint firstItem="WSZ-ME-nNs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EmJ-3d-Qgw"/>
                             <constraint firstItem="WSZ-ME-nNs" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="GX0-hi-QnL"/>
+                            <constraint firstItem="gla-Jx-QnT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="131" id="GzU-7W-Pba"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gla-Jx-QnT" secondAttribute="trailing" constant="130" id="Sda-k7-ERI"/>
                             <constraint firstItem="Tg5-8b-EPG" firstAttribute="top" secondItem="WSZ-ME-nNs" secondAttribute="bottom" constant="20" id="U8S-GF-um0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="gla-Jx-QnT" secondAttribute="bottom" constant="34" id="avq-9t-qs4"/>
                             <constraint firstItem="WSZ-ME-nNs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="o9y-Eh-MAZ"/>
                         </constraints>
                     </view>

@@ -10,7 +10,7 @@ import SwiftUI
 
 final class RGBViewController: UIViewController {
     
-    //MARK: -
+    //MARK: Outlets
     @IBOutlet var colorView: UIView!
     
     @IBOutlet var redSlider: UISlider!
@@ -21,11 +21,11 @@ final class RGBViewController: UIViewController {
     @IBOutlet var redLable: UILabel!
     @IBOutlet var greenLable: UILabel!
     @IBOutlet var blueLable: UILabel!
-    //MARK: -
+    //MARK: Properties
     var delegate: ViewControllerDelegate!
     var viewColor: UIColor!
     
-    //MARK: -
+    //MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,6 +37,11 @@ final class RGBViewController: UIViewController {
         blueSlider.minimumTrackTintColor = .blue
         setSliders()
         setColor()
+        
+        
+//        setValue(for: redSlider, greenSlider, blueSlider)
+//        setValue(for: redLable, greenLable, blueLable)
+//        setValue(for: redTextField, greenTextField, blueTextField)
         
         
 
@@ -71,12 +76,21 @@ final class RGBViewController: UIViewController {
         blueLable.text = String(format: "%.1f", blueSlider.value)
     }
     
+    @IBAction func doneButton(_ sender: UIButton) {
+        let color = UIColor(
+                    red: CGFloat(redSlider.value),
+                    green: CGFloat(greenSlider.value),
+                    blue: CGFloat(blueSlider.value),
+                    alpha: 1
+                )
+        delegate.setColor(color)
+        navigationController?.popViewController(animated: true)
+    }
 }
 
 
-
+//MARK: - Private Methods
 extension RGBViewController {
-    
     private func setColor() {
         colorView.backgroundColor = UIColor(
             red: CGFloat(redSlider.value),
@@ -86,14 +100,37 @@ extension RGBViewController {
         )
     
     }
-        
-    
-  
-    
     private func setSliders() {
     }
-
     
+    
+    
+    
+//MARK: - trying to replicate and apply information from the class
+    
+    private func setValue(for colorSliders: UISlider...) {
+        let ciColor = CIColor(color: viewColor)
+        
+        colorSliders.forEach { slider in
+            switch slider {
+            case redSlider: redSlider.value = Float(ciColor.red)
+            case greenSlider: greenSlider.value = Float(ciColor.green)
+            default: blueSlider.value = Float(ciColor.blue)
+   
+            }
+            
+        }
+    }
+    
+//    private func setValue(for labels: UILabel...) {
+//        labels.forEach { label in
+//            switch label {
+//            case redLable: label.text = string(from: redSlider)
+//            case greenLable: label.text = string(from: greenSlider)
+//            default: label.text = string(from: blueSlider)
+////            }
+//    }
+//    }
 }
 
     

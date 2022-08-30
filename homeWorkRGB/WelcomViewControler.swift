@@ -7,21 +7,27 @@
 
 import UIKit
 
-class WelcomViewControler: UIViewController {
+protocol ViewControllerDelegate {
+    func setColor(_ color: UIColor)
+}
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+final class WelcomViewControler: UIViewController, ViewControllerDelegate {
+    func setColor(_ color: UIColor) {
+        view.backgroundColor = color
     }
     
-// эксперименты:
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
+    
+    // эксперименты:
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            let vc = segue.destination as! RGBViewController
-            vc.view.backgroundColor = UIColor.black
+        if let vc = segue.destination as? RGBViewController {
+            vc.delegate = self
         }
-    
-    
-    
+    }
 }

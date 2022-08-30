@@ -13,7 +13,6 @@
 		2C8CC497289DA9B300E5C64F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C8CC495289DA9B300E5C64F /* Main.storyboard */; };
 		2C8CC499289DA9B400E5C64F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C8CC498289DA9B400E5C64F /* Assets.xcassets */; };
 		2C8CC49C289DA9B400E5C64F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C8CC49A289DA9B400E5C64F /* LaunchScreen.storyboard */; };
-		2CA032A328A03B2800A26A39 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA032A228A03B2800A26A39 /* MainViewController.swift */; };
 		2CAE186F28B6BE530066BA4E /* WelcomViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAE186E28B6BE530066BA4E /* WelcomViewControler.swift */; };
 /* End PBXBuildFile section */
 
@@ -26,7 +25,6 @@
 		2C8CC498289DA9B400E5C64F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C8CC49B289DA9B400E5C64F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2C8CC49D289DA9B400E5C64F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2CA032A228A03B2800A26A39 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		2CAE186E28B6BE530066BA4E /* WelcomViewControler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomViewControler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -62,13 +60,12 @@
 			children = (
 				2C8CC48F289DA9B300E5C64F /* AppDelegate.swift */,
 				2C8CC491289DA9B300E5C64F /* SceneDelegate.swift */,
-				2CA032A228A03B2800A26A39 /* MainViewController.swift */,
 				2C8CC493289DA9B300E5C64F /* RGBViewController.swift */,
+				2CAE186E28B6BE530066BA4E /* WelcomViewControler.swift */,
 				2C8CC495289DA9B300E5C64F /* Main.storyboard */,
 				2C8CC498289DA9B400E5C64F /* Assets.xcassets */,
 				2C8CC49A289DA9B400E5C64F /* LaunchScreen.storyboard */,
 				2C8CC49D289DA9B400E5C64F /* Info.plist */,
-				2CAE186E28B6BE530066BA4E /* WelcomViewControler.swift */,
 			);
 			path = homeWorkRGB;
 			sourceTree = "<group>";
@@ -148,7 +145,6 @@
 				2C8CC494289DA9B300E5C64F /* RGBViewController.swift in Sources */,
 				2C8CC490289DA9B300E5C64F /* AppDelegate.swift in Sources */,
 				2C8CC492289DA9B300E5C64F /* SceneDelegate.swift in Sources */,
-				2CA032A328A03B2800A26A39 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
