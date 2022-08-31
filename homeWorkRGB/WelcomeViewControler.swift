@@ -11,12 +11,9 @@ protocol ViewControllerDelegate {
     func setColor(_ color: UIColor)
 }
 
-
-final class WelcomViewControler: UIViewController, ViewControllerDelegate {
-    func setColor(_ color: UIColor) {
-        view.backgroundColor = color
-    }
+final class WelcomeViewControler: UIViewController, ViewControllerDelegate {
     
+    var memorizedColor: UIColor?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,9 +22,16 @@ final class WelcomViewControler: UIViewController, ViewControllerDelegate {
     
     // эксперименты:
     
+    func setColor(_ color: UIColor) {
+        view.backgroundColor = color
+        memorizedColor = color
+    }
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let vc = segue.destination as? RGBViewController {
             vc.delegate = self
+            vc.viewColor = memorizedColor
+            
         }
     }
 }

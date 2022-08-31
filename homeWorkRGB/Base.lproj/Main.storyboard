@@ -11,7 +11,7 @@
         <!--Welcome to the Colour Randomizer-->
         <scene sceneID="o3N-f2-YpU">
             <objects>
-                <viewController id="E9P-F0-oA4" customClass="WelcomViewControler" customModule="homeWorkRGB" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="E9P-F0-oA4" customClass="WelcomeViewControler" customModule="homeWorkRGB" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Njc-Qa-PMT" customClass="WelcomeViewController" customModule="homeWorkRGB" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

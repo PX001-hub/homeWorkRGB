@@ -17,7 +17,6 @@ final class RGBViewController: UIViewController {
     @IBOutlet var greenSlider: UISlider!
     @IBOutlet var blueSlider: UISlider!
     
-    
     @IBOutlet var redLable: UILabel!
     @IBOutlet var greenLable: UILabel!
     @IBOutlet var blueLable: UILabel!
@@ -37,15 +36,7 @@ final class RGBViewController: UIViewController {
         blueSlider.minimumTrackTintColor = .blue
         setSliders()
         setColor()
-        
-        
-//        setValue(for: redSlider, greenSlider, blueSlider)
-//        setValue(for: redLable, greenLable, blueLable)
-//        setValue(for: redTextField, greenTextField, blueTextField)
-        
-        
-
-       
+   
     }
     
     @IBAction func redSliderAction() {
@@ -88,7 +79,6 @@ final class RGBViewController: UIViewController {
     }
 }
 
-
 //MARK: - Private Methods
 extension RGBViewController {
     private func setColor() {
@@ -102,9 +92,6 @@ extension RGBViewController {
     }
     private func setSliders() {
     }
-    
-    
-    
     
 //MARK: - trying to replicate and apply information from the class
     
@@ -121,16 +108,6 @@ extension RGBViewController {
             
         }
     }
-    
-//    private func setValue(for labels: UILabel...) {
-//        labels.forEach { label in
-//            switch label {
-//            case redLable: label.text = string(from: redSlider)
-//            case greenLable: label.text = string(from: greenSlider)
-//            default: label.text = string(from: blueSlider)
-////            }
-//    }
-//    }
 }
 
     
