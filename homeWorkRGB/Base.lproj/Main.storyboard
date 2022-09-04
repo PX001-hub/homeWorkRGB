@@ -112,21 +112,21 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Trn-dt-R8O">
                                         <rect key="frame" x="98" y="0.0" width="180" height="190"/>
                                         <subviews>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="rJS-qD-YID" userLabel="Red Slider">
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="rJS-qD-YID" userLabel="Red Slider">
                                                 <rect key="frame" x="-2" y="0.0" width="184" height="31"/>
                                                 <connections>
                                                     <action selector="redSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="3x9-zq-xtp"/>
                                                     <action selector="redSliderValue" destination="BYZ-38-t0r" eventType="valueChanged" id="2zv-Ol-suX"/>
                                                 </connections>
                                             </slider>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="3yx-D7-v8Z" userLabel="Green Slider">
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="3yx-D7-v8Z" userLabel="Green Slider">
                                                 <rect key="frame" x="-2" y="80" width="184" height="31"/>
                                                 <connections>
                                                     <action selector="greenSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="DmU-Ww-jcJ"/>
                                                     <action selector="greenSliderValue" destination="BYZ-38-t0r" eventType="valueChanged" id="I0G-iS-fEe"/>
                                                 </connections>
                                             </slider>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="AWl-Nz-x7K" userLabel="Blue Slider">
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="AWl-Nz-x7K" userLabel="Blue Slider">
                                                 <rect key="frame" x="-2" y="160" width="184" height="31"/>
                                                 <connections>
                                                     <action selector="blueSliderAction" destination="BYZ-38-t0r" eventType="valueChanged" id="II3-Lo-sOB"/>

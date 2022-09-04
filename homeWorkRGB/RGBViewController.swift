@@ -24,6 +24,7 @@ final class RGBViewController: UIViewController {
     var delegate: ViewControllerDelegate!
     var viewColor: UIColor!
     
+    
     //MARK: Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +37,8 @@ final class RGBViewController: UIViewController {
         blueSlider.minimumTrackTintColor = .blue
         setSliders()
         setColor()
+        
+    
    
     }
     

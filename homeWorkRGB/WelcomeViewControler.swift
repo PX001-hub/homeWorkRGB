@@ -31,7 +31,6 @@ final class WelcomeViewControler: UIViewController, ViewControllerDelegate {
         if let vc = segue.destination as? RGBViewController {
             vc.delegate = self
             vc.viewColor = memorizedColor
-            
         }
     }
 }
